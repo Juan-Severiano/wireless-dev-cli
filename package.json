@@ -1,0 +1,60 @@
+{
+  "name": "wireless-dev-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for wireless React Native/Expo development without USB cables",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "wireless-dev": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run build",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "cli",
+    "adb",
+    "wireless",
+    "debugging",
+    "mobile",
+    "development",
+    "android"
+  ],
+  "author": "Francisco Juan <juansoussev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan-Severiano/wireless-dev-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Juan-Severiano/wireless-dev-cli/issues"
+  },
+  "homepage": "https://github.com/Juan-Severiano/wireless-dev-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^9.4.1",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.5",
+    "@types/node": "^18.11.9",
+    "@types/qrcode-terminal": "^0.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
